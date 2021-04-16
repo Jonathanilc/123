@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fitness tracker stage 1</title>
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="examples.css" rel="stylesheet" type="text/css" />
+  <script defer src="examples.js"></script>
+</head>
+
+<body>
+  <!-- top bar -->
+  <div class="bar">Fitness Log</div>
+
+  <!-- main content -->
+  <div class="main">
+    <!-- desktop banner -->
+    <div class="welcome_container">
+      <div class="leftContainer">
+        <div class="title">Welcome back, Joey</div>
+        <div class="subTitle">What activity session are you logging?</div>
+      </div>
+      <img class="image" src="./header_image.png" alt="header_image">
+    </div>
+
+    <!-- mobile banner -->
+    <div class="welcome_container_mobile">
+      <div class="title">Welcome back, Joey</div>
+      <img class="image" src="./header_image.png" alt="header_image">
+      <div class="subTitle">What activity session are you logging?</div>
+    </div>
+
+    <!-- past activity -->
+    <div class="past_activity">
+      <div class="title">Past Activity</div>
+      <div class="container">
+        <div class="innerWrapper">
+          <button id="future_new_button" class="btnCreate">Add New Activity</button>
+          <form class="future_menu" id="future_menu" action="">
+            <div>
+              <label for="date">Date</label>
+              <input type="date" id="date" name="trip-start" value="2018-01-01" max="2018-12-31">
+            </div>
+            <div>
+              <label for="activity">Activity</label>
+              <select name="activity" id="activity">
+                <option value="Walk">Walk</option>
+                <option value="Run">Run</option>
+                <option value="Swim">Swim</option>
+                <option value="Bike">Bike</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Soccer">Soccer</option>
+                <option value="Basketball">Basketball</option>
+              </select>
+            </div>
+            <span class="for">for</span>
+            <div class="time">
+              <label for="time">Time/Distance</label>
+              <input type="number" id="time" name="time" required>
+            </div>
+            <div class="unit">
+              <label for="unit">Unit</label>
+              <input type="text" value="km" name="unit" id="unit">
+            </div>
+            <a id="future_submit_button">Submit</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- future plan -->
+    <div class="future_plan">
+      <div class="title">Future Plan</div>
+      <div class="container">
+        <div class="innerWrapper">
+          <button id="past_new_button" class="btnCreate">Add New Activity</button>
+          <form class="past_menu" id="past_menu" action="">
+            <label for="date">Date</label>
+            <input type="date" id="future_date" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+            <label for="activity">Activity</label>
+            <select name="activity" id="future_activity">
+              <option value="Walk">Walk</option>
+              <option value="Run">Run</option>
+              <option value="Swim">Swim</option>
+              <option value="Bike">Bike</option>
+              <option value="Yoga">Yoga</option>
+              <option value="Soccer">Soccer</option>
+              <option value="Basketball">Basketball</option>
+            </select>
+            <a id="past_submit_button">Submit</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="examples.js"></script>
+</body>
+
+</html>
